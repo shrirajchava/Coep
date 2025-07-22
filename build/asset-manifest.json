@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7a3399bf.css",
+    "main.js": "/static/js/main.0a306eb1.js",
+    "static/js/453.d2884d91.chunk.js": "/static/js/453.d2884d91.chunk.js",
+    "static/media/COEP-campus.png": "/static/media/COEP-campus.cb1a1f51b718d8b4b1ad.png",
+    "index.html": "/index.html",
+    "main.7a3399bf.css.map": "/static/css/main.7a3399bf.css.map",
+    "main.0a306eb1.js.map": "/static/js/main.0a306eb1.js.map",
+    "453.d2884d91.chunk.js.map": "/static/js/453.d2884d91.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a3399bf.css",
+    "static/js/main.0a306eb1.js"
+  ]
+}

@@ -1,0 +1,375 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+  color: #333;
+}
+
+.App {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Header */
+/* Sticky Header */
+/* Header container */
+.header {
+  position: fixed;
+  background-color: white;
+  z-index: 999;
+  padding: 10px 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin: -10px;
+}
+.logo-img {
+  height: 50px;
+  margin-right: 12px;
+}
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+.nav-links a {
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+}
+.nav-links a:hover {
+  color: #0077cc;
+}
+
+/* Hamburger Menu (hidden on desktop) */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+}
+.nav-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    max-height: 300px;
+  }
+
+  .nav-links a {
+    padding: 12px 20px;
+    border-top: 1px solid #eee;
+  }
+}
+
+
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background-image: url('/public/COEP-campus.png'); /* This uses public folder path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Adjust height as needed */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.hero-overlay {
+  background: rgba(0 0 0 / 70%); /* Adds dark overlay for text readability */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+      /* margin: 62px; */
+}
+
+
+
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 20px;
+}
+
+/* General Section Style */
+.section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #222;
+  text-align: center;
+}
+
+/* About Section */
+.about p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* Objectives */
+.objectives ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.objectives li {
+  margin-bottom: 12px;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.schedule-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.admission-schedule {
+  padding: 40px 20px;
+  background-color: #fafafa;
+}
+
+
+/* Services */
+.slide-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding-bottom: 1rem;
+}
+
+.slide {
+  min-width: 350px;
+  flex: 0 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #fdfdfd;
+  scroll-snap-align: start;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.structure-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.structure-table th,
+.structure-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.structure-table th {
+  background-color: #f0f0f0;
+}
+
+/* Contact */
+.contact-form {
+  max-width: 450px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.contact-form button {
+  padding: 12px;
+  background-color: #3a0ca3;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #4f2dcf;
+}
+
+/* Footer */
+.footer {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  padding: 30px 20px;
+  font-size: 14px;
+}
+
+.footer a {
+  color: #4dafff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-info {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header {
+    padding: 20px 10px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero h2 {
+    font-size: 20px;
+  }
+
+  .section h2 {
+    font-size: 24px;
+  }
+}
+
+
+.course-structure {
+  padding: 2rem;
+  background-color: #fdfdfd;
+}
+
+.course-structure h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.structure-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.structure-table th,
+.structure-table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+}
+
+.structure-table th {
+  background-color: #f0f0f0;
+  color: #222;
+}
+
+.structure-table tbody tr:nth-child(odd) {
+  background-color: #fafafa;
+}

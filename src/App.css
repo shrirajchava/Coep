@@ -241,6 +241,10 @@ body {
 }
 
 /* Contact */
+
+
+
+
 .contact-form {
   max-width: 450px;
   margin: 0 auto;
@@ -373,3 +377,5 @@ body {
 .structure-table tbody tr:nth-child(odd) {
   background-color: #fafafa;
 }
+
+

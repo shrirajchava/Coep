@@ -1,18 +1,22 @@
 import React, { useState } from "react";
 import "./App.css";
+import ContactForm from "./contact/ContactForm";
 // import eduImage from "./public/logo512.png"; // Add your educational image here
 
 function App() {
-  const [formData, setFormData] = useState({ name: "", email: "",phone: "", message: ""  });
+  // const [formData, setFormData] = useState({ name: "", email: "",phone: "", message: ""  });
 
-  const handleChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  // const handleChange = (e) =>
+  //   setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(`Thanks, ${formData.name}! Message received.`);
-    setFormData({ name: "", email: "",phone: "", message: "" });
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   alert(`Thanks, ${formData.name}! Message received.`);
+  //   setFormData({ name: "", email: "",phone: "", message: "" });
+  // };
+
+ 
+
 const [menuOpen, setMenuOpen] = useState("https://formspree.io/f/xeozevey");
   return (
     <div className="App">
@@ -266,9 +270,9 @@ const [menuOpen, setMenuOpen] = useState("https://formspree.io/f/xeozevey");
 
 
       <section className="section contact" id="contact">
-        <h2>Contact Us</h2>
+        {/* <h2>Contact Us</h2> */}
         
-        <form action="https://formspree.io/f/mgvzvwdl" method="post" onSubmit={handleSubmit} className="contact-form">
+        {/* <form action="https://formspree.io/f/mgvzvwdl" method="post" onSubmit={handleSubmit} className="contact-form">
           <input
             type="text"
             name="name"
@@ -301,9 +305,12 @@ const [menuOpen, setMenuOpen] = useState("https://formspree.io/f/xeozevey");
             value={formData.message}
             onChange={handleChange}
           ></textarea>
-          <button type="submit">Send Message</button>
-          
-        </form>
+          <button type="submit">Send Message</button> */}
+          <ContactForm />;
+        {/* </form> */}
+
+        
+  
         
       </section>
 
@@ -323,7 +330,7 @@ const [menuOpen, setMenuOpen] = useState("https://formspree.io/f/xeozevey");
  31 July 2025</p>
     </div>
     <div className="footer-bottom">
-      <p>© {new Date().getFullYear()} COEP Technological University – PGDDSAI . All rights reserved. | Designed and Developed by shriraj</p>
+      <p>© {new Date().getFullYear()} COEP Technological University – PGDDSAI . All rights reserved. | Designed and Developed by Shriraj Chavan</p>
     </div>
   </div>
 </footer>
@@ -332,5 +339,5 @@ const [menuOpen, setMenuOpen] = useState("https://formspree.io/f/xeozevey");
   );
 }
 
+
 export default App;
-// 🎓📘📚🧠🌐💼⏱️
